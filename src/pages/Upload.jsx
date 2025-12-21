@@ -95,15 +95,17 @@ function Upload() {
     <div className="upload-page">
       <div className="hero">
         <h1 className="logo-font">TACTIQ SPAR</h1>
-        <p className="tagline logo-font">BOXING CLIP ANALYSER</p>
-        <p className="subtitle">Upload a boxing clip. Get instant AI-powered insights.</p>
+        <p className="tagline logo-font">AI-POWERED BOXING ANALYSIS</p>
+        <p className="subtitle">Instant AI insights on every punch, every fight. Know exactly what you did right—and what to fix.</p>
       </div>
 
-      <Newsletter />
+      <div className="waitlist-cta">
+        <Newsletter />
+      </div>
 
       {!processing && !results && (
         <section className="demo-section">
-          <h2 className="section-title">See it in action</h2>
+          <h2 className="section-title">Watch the transformation</h2>
           <div className="demo-content">
             <div className="demo-videos">
               <div className="demo-video-container">
@@ -190,9 +192,9 @@ function Upload() {
                   <circle cx="12" cy="12" r="2"/>
                 </svg>
               </div>
-              <h3>Fighter Tracking</h3>
-              <p>AI detects and tracks both fighters throughout the clip</p>
-              <p className="feature-benefit">See winning positions and defensive gaps</p>
+              <h3>Real-Time Detection</h3>
+              <p>AI tracks both fighters and every movement frame-by-frame</p>
+              <p className="feature-benefit">Never miss a technique or opening</p>
             </div>
             <div className="feature-item">
               <div className="feature-icon-box">
@@ -200,9 +202,9 @@ function Upload() {
                   <path d="M18 8c0-2.2-1.8-4-4-4s-4 1.8-4 4c0 1.5.8 2.7 2 3.4V14l-6 6h4v2h6v-2h4l-6-6v-2.6c1.2-.7 2-1.9 2-3.4z"/>
                 </svg>
               </div>
-              <h3>Punch Counting</h3>
-              <p>Counts punches thrown and landed for each fighter</p>
-              <p className="feature-benefit">Identify your best shots and where you're exposed</p>
+              <h3>Complete Metrics</h3>
+              <p>Punches thrown, landed, accuracy, stance analysis, and more</p>
+              <p className="feature-benefit">See your stats like never before</p>
             </div>
             <div className="feature-item">
               <div className="feature-icon-box">
@@ -211,24 +213,24 @@ function Upload() {
                 </svg>
               </div>
               <h3>AI Verdict</h3>
-              <p>Determines the winner based on performance metrics</p>
-              <p className="feature-benefit">Understand what worked and what didn't</p>
+              <p>Get an objective assessment of who won and why</p>
+              <p className="feature-benefit">Understand every decision scientifically</p>
             </div>
           </div>
           <div className="coming-soon-container">
-            <p className="features-coming-soon">Much more coming soon including:</p>
+            <p className="features-coming-soon">Coming next</p>
             <div className="coming-soon-features">
               <div className="coming-soon-item">
-                <strong>Personal AI Coach</strong> – Personalized improvements, drills, and live feedback
+                <strong>Personal AI Coach</strong> – Live feedback and personalized drills
               </div>
               <div className="coming-soon-item">
-                <strong>Bag Work & Pads Analysis</strong> – Heavy bag and pad technique breakdown
+                <strong>Technique Breakdown</strong> – Frame-by-frame analysis of your form
               </div>
               <div className="coming-soon-item">
-                <strong>Performance Trends</strong> – Track your progress across multiple sessions
+                <strong>Performance Trends</strong> – Track your progress over time
               </div>
               <div className="coming-soon-item">
-                <strong>Technique Library</strong> – AI-powered recommendations for your style
+                <strong>Community Leaderboard</strong> – Compete and compare with others
               </div>
             </div>
           </div>
