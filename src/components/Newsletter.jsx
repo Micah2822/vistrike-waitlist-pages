@@ -32,8 +32,8 @@ function Newsletter() {
   return (
     <div className="newsletter-section">
       <div className="newsletter-content">
-        <h3 className="newsletter-title">Stay in the loop</h3>
-        <p className="newsletter-subtitle">Get notified about new features and updates</p>
+        <h3 className="newsletter-title">Join the Waitlist</h3>
+        <p className="newsletter-subtitle">Get notified when we launch</p>
         
         {status === 'success' ? (
           <div className="newsletter-success">
@@ -55,7 +55,7 @@ function Newsletter() {
               className="newsletter-btn"
               disabled={status === 'loading'}
             >
-              {status === 'loading' ? 'Joining...' : 'Join'}
+              {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
             </button>
           </form>
         )}

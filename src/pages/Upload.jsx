@@ -99,6 +99,8 @@ function Upload() {
         <p className="subtitle">Upload a boxing clip. Get instant AI-powered insights.</p>
       </div>
 
+      <Newsletter />
+
       {!processing && !results && (
         <section className="demo-section">
           <h2 className="section-title">See it in action</h2>
@@ -235,7 +237,6 @@ function Upload() {
 
       {!processing && !results && (
         <>
-          <Newsletter />
           <footer className="page-footer">
             <div className="footer-content">
               <p className="tech-info">
