@@ -184,7 +184,7 @@ function Upload() {
 
       {!processing && !results && (
         <section className="features-section">
-          <h2 className="section-subtitle">What You'll Get</h2>
+          <h2 className="section-subtitle">Features Coming Soon</h2>
           <div className="features-grid">
             <div className="feature-item">
               <div className="feature-icon-box">
@@ -215,22 +215,17 @@ function Upload() {
               <h3>AI Verdict</h3>
               <p>Get an objective assessment of who won and why</p>
             </div>
-          </div>
-          <div className="coming-soon-container">
-            <h2 className="section-subtitle">Coming Later</h2>
-            <div className="coming-soon-features">
-              <div className="coming-soon-item">
-                <strong>Personal AI Coach</strong> – Live feedback and personalized drills
-              </div>
-              <div className="coming-soon-item">
-                <strong>Technique Breakdown</strong> – Frame-by-frame analysis of your form
-              </div>
-              <div className="coming-soon-item">
-                <strong>Performance Trends</strong> – Track your progress over time
-              </div>
-              <div className="coming-soon-item">
-                <strong>Community Leaderboard</strong> – Compete and compare with others
-              </div>
+            <div className="coming-soon-item">
+              <strong>Personal AI Coach</strong> – Live feedback and personalized drills
+            </div>
+            <div className="coming-soon-item">
+              <strong>Technique Breakdown</strong> – Frame-by-frame analysis of your form
+            </div>
+            <div className="coming-soon-item">
+              <strong>Performance Trends</strong> – Track your progress over time
+            </div>
+            <div className="coming-soon-item">
+              <strong>Community Leaderboard</strong> – Compete and compare with others
             </div>
           </div>
         </section>
