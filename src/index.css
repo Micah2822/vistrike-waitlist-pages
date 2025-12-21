@@ -1,0 +1,116 @@
+:root {
+  --bg-primary: #0B0C10;
+  --bg-secondary: #121317;
+  --bg-card: #121317;
+  --bg-hover: #1A1C23;
+  --border-primary: #1C1F26;
+  --border-secondary: #2A2D36;
+  --accent: #00E6A8;
+  --accent-hover: #00cc96;
+  --text-primary: #F2F4F8;
+  --text-secondary: #B6BBC6;
+  --text-muted: #6B6F76;
+  --error: #FF4D4D;
+  --fighter-red: #FF6B6B;
+  --fighter-blue: #4D9EFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.logo-font {
+  font-family: 'Eurostile', 'Eurostile Extended', sans-serif;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 230, 168, 0.3);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(0, 230, 168, 0.1);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 230, 168, 0.3);
+  box-shadow: 0 0 20px rgba(0, 230, 168, 0.1);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+}

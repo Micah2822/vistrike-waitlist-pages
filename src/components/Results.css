@@ -1,0 +1,349 @@
+.results-page {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.results-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.video-section,
+.metrics-section {
+  margin-bottom: 40px;
+}
+
+.video-section h3,
+.metrics-section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.result-video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  background: #000;
+  aspect-ratio: 16/9;
+}
+
+.video-placeholder {
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 2px dashed var(--border-secondary);
+  border-radius: 12px;
+  color: var(--text-muted);
+}
+
+.download-btn {
+  margin-top: 16px;
+}
+
+.transient-notice {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: rgba(0, 230, 168, 0.1);
+  border: 1px solid rgba(0, 230, 168, 0.3);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--accent);
+  text-align: center;
+}
+
+.fighters-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.fighter-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.fighter-card.fighter-1 {
+  border-left: 4px solid var(--fighter-red);
+}
+
+.fighter-card.fighter-2 {
+  border-left: 4px solid var(--fighter-blue);
+}
+
+.fighter-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.fighter-card.fighter-1 .fighter-label {
+  color: var(--fighter-red);
+}
+
+.fighter-card.fighter-2 .fighter-label {
+  color: var(--fighter-blue);
+}
+
+.fighter-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.exchange-info {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.exchange-badge {
+  display: inline-block;
+  background: rgba(0, 230, 168, 0.1);
+  border: 1px solid rgba(0, 230, 168, 0.3);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.momentum-section,
+.heatmap-section {
+  margin-bottom: 40px;
+}
+
+.momentum-section h3,
+.heatmap-section h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.momentum-stats {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 20px;
+}
+
+.momentum-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.momentum-stat .stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.momentum-stat .stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.sparkline-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.sparkline-canvas {
+  width: 100%;
+  height: 120px;
+}
+
+.heatmap-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.heatmap-cell {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 230, 168, 0.2);
+}
+
+.no-data {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.verdict-section {
+  margin-bottom: 40px;
+}
+
+.verdict-section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.verdict-card {
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.verdict-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(24, 232, 168, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.verdict-card.fighter-1-win {
+  border-color: var(--fighter-red);
+}
+
+.verdict-card.fighter-1-win::before {
+  background: linear-gradient(135deg, rgba(255, 99, 99, 0.15) 0%, transparent 50%);
+}
+
+.verdict-card.fighter-2-win {
+  border-color: var(--fighter-blue);
+}
+
+.verdict-card.fighter-2-win::before {
+  background: linear-gradient(135deg, rgba(99, 179, 255, 0.15) 0%, transparent 50%);
+}
+
+.verdict-card.tie {
+  border-color: var(--accent);
+}
+
+.verdict-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.verdict-message {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.verdict-badge {
+  display: inline-block;
+  background: rgba(24, 232, 168, 0.2);
+  border: 1px solid var(--accent);
+  border-radius: 24px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  position: relative;
+  z-index: 1;
+}
+
+.verdict-card.fighter-1-win .verdict-badge {
+  background: rgba(255, 99, 99, 0.2);
+  border-color: var(--fighter-red);
+  color: var(--fighter-red);
+}
+
+.verdict-card.fighter-2-win .verdict-badge {
+  background: rgba(99, 179, 255, 0.2);
+  border-color: var(--fighter-blue);
+  color: var(--fighter-blue);
+}
+
+.report-section {
+  margin-bottom: 40px;
+}
+
+.report-section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.feedback-cta {
+  text-align: center;
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 16px;
+}
+
+.feedback-cta p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .results-title {
+    font-size: 24px;
+  }
+
+  .fighters-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .fighter-card {
+    padding: 16px;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+}
