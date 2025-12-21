@@ -185,47 +185,78 @@ function Upload() {
       {!processing && !results && (
         <section className="features-section">
           <h2 className="section-subtitle">Features Coming Soon</h2>
-          <div className="features-grid">
-            <div className="feature-item">
-              <div className="feature-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <circle cx="12" cy="12" r="6"/>
-                  <circle cx="12" cy="12" r="2"/>
-                </svg>
+          <div className="features-reel">
+            <div className="features-track">
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                <strong>Real-Time Detection</strong>
+                <span>Frame-by-frame tracking</span>
               </div>
-              <h3>Real-Time Detection</h3>
-              <p>AI tracks both fighters and every movement frame-by-frame</p>
-            </div>
-            <div className="feature-item">
-              <div className="feature-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M18 8c0-2.2-1.8-4-4-4s-4 1.8-4 4c0 1.5.8 2.7 2 3.4V14l-6 6h4v2h6v-2h4l-6-6v-2.6c1.2-.7 2-1.9 2-3.4z"/>
-                </svg>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8c0-2.2-1.8-4-4-4s-4 1.8-4 4c0 1.5.8 2.7 2 3.4V14l-6 6h4v2h6v-2h4l-6-6v-2.6c1.2-.7 2-1.9 2-3.4z"/></svg>
+                <strong>Complete Metrics</strong>
+                <span>Punches, accuracy, stance</span>
               </div>
-              <h3>Complete Metrics</h3>
-              <p>Punches thrown, landed, accuracy, stance analysis, and more</p>
-            </div>
-            <div className="feature-item">
-              <div className="feature-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                </svg>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <strong>AI Verdict</strong>
+                <span>Objective winner analysis</span>
               </div>
-              <h3>AI Verdict</h3>
-              <p>Get an objective assessment of who won and why</p>
-            </div>
-            <div className="coming-soon-item">
-              <strong>Personal AI Coach</strong> – Live feedback and personalized drills
-            </div>
-            <div className="coming-soon-item">
-              <strong>Technique Breakdown</strong> – Frame-by-frame analysis of your form
-            </div>
-            <div className="coming-soon-item">
-              <strong>Performance Trends</strong> – Track your progress over time
-            </div>
-            <div className="coming-soon-item">
-              <strong>Community Leaderboard</strong> – Compete and compare with others
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <strong>Personal AI Coach</strong>
+                <span>Live feedback and drills</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                <strong>Technique Breakdown</strong>
+                <span>Form analysis</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <strong>Performance Trends</strong>
+                <span>Track your progress</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <strong>Community Leaderboard</strong>
+                <span>Compete with others</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                <strong>Real-Time Detection</strong>
+                <span>Frame-by-frame tracking</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8c0-2.2-1.8-4-4-4s-4 1.8-4 4c0 1.5.8 2.7 2 3.4V14l-6 6h4v2h6v-2h4l-6-6v-2.6c1.2-.7 2-1.9 2-3.4z"/></svg>
+                <strong>Complete Metrics</strong>
+                <span>Punches, accuracy, stance</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <strong>AI Verdict</strong>
+                <span>Objective winner analysis</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <strong>Personal AI Coach</strong>
+                <span>Live feedback and drills</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                <strong>Technique Breakdown</strong>
+                <span>Form analysis</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <strong>Performance Trends</strong>
+                <span>Track your progress</span>
+              </div>
+              <div className="reel-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <strong>Community Leaderboard</strong>
+                <span>Compete with others</span>
+              </div>
             </div>
           </div>
         </section>
