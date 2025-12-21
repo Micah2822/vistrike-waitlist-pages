@@ -15,10 +15,10 @@ function Header() {
             rel="noopener noreferrer"
             className="nav-link"
           >
-            💬 Share Feedback
+            Share Feedback
           </a>
-          <Link to="/privacy" className="nav-link">
-            📋 Privacy
+          <Link to="/about" className="nav-link">
+            About
           </Link>
         </nav>
       </div>

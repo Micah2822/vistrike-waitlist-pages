@@ -1,0 +1,66 @@
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 32px;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.about-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.about-content {
+  line-height: 1.7;
+}
+
+.about-content h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.about-content h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+  color: var(--text-primary);
+}
+
+.about-content p {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.about-content hr {
+  border: none;
+  border-top: 1px solid var(--border-secondary);
+  margin: 24px 0;
+}
+
+.back-link {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.back-link a {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 28px;
+  }
+}
