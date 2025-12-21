@@ -267,7 +267,7 @@ function Upload() {
           <footer className="page-footer">
             <div className="footer-content">
               <p className="tech-info">
-                Powered by YOLOv8-pose ONNX. Built by boxers for boxers and coaches.
+                Built by boxers for boxers and coaches.
               </p>
               <div className="footer-links">
                 <a href="/privacy">Privacy</a>
