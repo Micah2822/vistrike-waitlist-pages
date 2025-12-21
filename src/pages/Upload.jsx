@@ -104,8 +104,9 @@ function Upload() {
       </div>
 
       {!processing && !results && (
-        <section className="demo-section">
-          <h2 className="section-title">Watch the transformation</h2>
+        <section className="preview-section">
+          <div className="coming-soon-banner">Coming Soon</div>
+          <h2 className="section-title">A sneak peek</h2>
           <div className="demo-content">
             <div className="demo-videos">
               <div className="demo-video-container">
@@ -183,6 +184,7 @@ function Upload() {
 
       {!processing && !results && (
         <section className="features-section">
+          <h2 className="section-subtitle">What You'll Get</h2>
           <div className="features-grid">
             <div className="feature-item">
               <div className="feature-icon-box">
@@ -194,7 +196,6 @@ function Upload() {
               </div>
               <h3>Real-Time Detection</h3>
               <p>AI tracks both fighters and every movement frame-by-frame</p>
-              <p className="feature-benefit">Never miss a technique or opening</p>
             </div>
             <div className="feature-item">
               <div className="feature-icon-box">
@@ -204,7 +205,6 @@ function Upload() {
               </div>
               <h3>Complete Metrics</h3>
               <p>Punches thrown, landed, accuracy, stance analysis, and more</p>
-              <p className="feature-benefit">See your stats like never before</p>
             </div>
             <div className="feature-item">
               <div className="feature-icon-box">
@@ -214,11 +214,10 @@ function Upload() {
               </div>
               <h3>AI Verdict</h3>
               <p>Get an objective assessment of who won and why</p>
-              <p className="feature-benefit">Understand every decision scientifically</p>
             </div>
           </div>
           <div className="coming-soon-container">
-            <p className="features-coming-soon">Coming next</p>
+            <h2 className="section-subtitle">Coming Later</h2>
             <div className="coming-soon-features">
               <div className="coming-soon-item">
                 <strong>Personal AI Coach</strong> – Live feedback and personalized drills
