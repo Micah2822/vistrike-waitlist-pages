@@ -171,9 +171,6 @@ function Upload() {
         {!processing && (
           <>
             <div className="upload-card">
-              <h2 className="upload-title">Get Your Breakdown for Free!</h2>
-              <p className="upload-subtitle">Drop your clip below (.mp4 or .mov) — due to high demand, we've temporarily capped uploads at 50MB. Recommend 20 seconds for fastest analysis.</p>
-              
               <div 
                 className={`upload-zone ${dragActive ? 'active' : ''} ${file ? 'has-file' : ''}`}
                 onDragEnter={handleDrag}
@@ -224,11 +221,6 @@ function Upload() {
                 </div>
               </div>
             )}
-
-            <div className="mvp-note-inline">
-              <strong>Note:</strong> This is a new MVP launch still in development, so results won't be as accurate at the moment. But feedback is still greatly appreciated!{' '}
-              <a href="https://tally.so/r/m6b09Y" target="_blank" rel="noopener noreferrer">Share feedback</a>
-            </div>
           </>
         )}
 
