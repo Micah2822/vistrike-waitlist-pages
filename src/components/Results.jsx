@@ -107,7 +107,7 @@ function Results({ data, onReset }) {
       const url = window.URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      a.download = `tactiq_processed_${data.upload_id}.mp4`
+      a.download = `TACTIQ_processed_${data.upload_id}.mp4`
       document.body.appendChild(a)
       a.click()
       window.URL.revokeObjectURL(url)
