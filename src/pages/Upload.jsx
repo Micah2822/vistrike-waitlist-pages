@@ -168,62 +168,6 @@ function Upload() {
       )}
 
       <section className="upload-section">
-        {!processing && (
-          <>
-            <div className="upload-card">
-              <div 
-                className={`upload-zone ${dragActive ? 'active' : ''} ${file ? 'has-file' : ''}`}
-                onDragEnter={handleDrag}
-                onDragLeave={handleDrag}
-                onDragOver={handleDrag}
-                onDrop={handleDrop}
-                onClick={() => inputRef.current?.click()}
-              >
-                <input
-                  ref={inputRef}
-                  type="file"
-                  accept=".mp4,.mov,video/mp4,video/quicktime"
-                  onChange={(e) => e.target.files[0] && handleFile(e.target.files[0])}
-                  hidden
-                />
-                {file ? (
-                  <div className="file-info">
-                    <span className="file-icon">🎬</span>
-                    <span className="file-name">{file.name}</span>
-                    <span className="file-size">({(file.size / (1024 * 1024)).toFixed(1)} MB)</span>
-                  </div>
-                ) : (
-                  <div className="upload-prompt">
-                    <span className="upload-icon">📁</span>
-                    <span>Drag & drop or click to select</span>
-                  </div>
-                )}
-              </div>
-
-              {error && <div className="error-message">❌ {error}</div>}
-
-              {file && (
-                <button 
-                  className="btn-primary analyze-btn"
-                  onClick={handleAnalyze}
-                >
-                  Analyze Clip
-                </button>
-              )}
-            </div>
-
-            {file && (
-              <div className="privacy-notice">
-                <div className="privacy-icon-large">🔒</div>
-                <div className="privacy-text">
-                  <strong>Privacy First</strong>
-                  <span>Your footage is never stored or used for AI training. Files delete instantly when you leave.</span>
-                </div>
-              </div>
-            )}
-          </>
-        )}
-
         {processing && (
           <Processing 
             file={file} 
