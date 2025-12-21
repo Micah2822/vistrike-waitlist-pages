@@ -33,7 +33,7 @@ function Newsletter() {
     <div className="newsletter-section">
       <div className="newsletter-content">
         <h3 className="newsletter-title">Join the Waitlist</h3>
-        <p className="newsletter-subtitle">Get notified when we launch</p>
+        <p className="newsletter-subtitle">Get notified when we launch v2.0</p>
         
         {status === 'success' ? (
           <div className="newsletter-success">
