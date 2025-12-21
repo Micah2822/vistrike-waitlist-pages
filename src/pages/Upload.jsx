@@ -96,7 +96,7 @@ function Upload() {
       <div className="hero">
         <h1 className="logo-font">TACTIQ SPAR</h1>
         <p className="tagline logo-font">AI-POWERED BOXING ANALYSIS</p>
-        <p className="subtitle">Instant AI insights on every punch, every fight. Know exactly what you did right—and what to fix.</p>
+        <p className="subtitle">Instant AI insights on every punch, every fight. Know exactly what you did right, and what to fix.</p>
       </div>
 
       <div className="waitlist-cta">
