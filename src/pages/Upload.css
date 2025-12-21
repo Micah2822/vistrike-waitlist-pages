@@ -19,6 +19,10 @@
   text-transform: uppercase;
 }
 
+.hero h1 .highlight-white {
+  color: white;
+}
+
 .hero .tagline {
   font-size: 18px;
   font-weight: 700;
