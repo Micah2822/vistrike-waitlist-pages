@@ -96,7 +96,7 @@ function Upload() {
       <div className="hero">
         <h1 className="logo-font">TACT<span className="highlight-white">IQ</span> SPAR</h1>
         <p className="tagline logo-font">AI-POWERED BOXING ANALYSIS</p>
-        <p className="subtitle">Welcome to the future of Combat Sports.<br />Powered by cutting edge AI, TACTIQ delivers instant insights on every punch, fight, and training session straight to your phone. See your performance with precision and clarity.</p>
+        <p className="subtitle">Welcome to the future of Combat Sports.<br /><br />Powered by cutting edge AI, TACTIQ delivers instant insights on every punch, fight, and training session straight to your phone. See your performance with precision and clarity.</p>
       </div>
 
       <div className="waitlist-cta">
