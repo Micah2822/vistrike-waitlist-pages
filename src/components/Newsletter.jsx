@@ -9,6 +9,12 @@ function Newsletter() {
     e.preventDefault()
     if (!email) return
 
+    if (window.mixpanel) {
+      window.mixpanel.track('Waitlist Join Button Pressed', {
+        email_provided: !!email
+      })
+    }
+
     setStatus('loading')
 
     const formData = new FormData()
@@ -47,6 +53,11 @@ function Newsletter() {
               className="newsletter-input"
               placeholder="Enter your email"
               value={email}
+              onFocus={() => {
+                if (window.mixpanel) {
+                  window.mixpanel.track('Waitlist Email Input Focused')
+                }
+              }}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
