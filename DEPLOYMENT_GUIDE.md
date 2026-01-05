@@ -46,15 +46,17 @@ The build creates a `dist/` folder with optimized production files.
 
 ### Step 3: Configure SPA Routing
 
-For client-side routing to work:
+For client-side routing to work (ensuring pages like `/privacy` and `/about` are accessible):
 
-1. Go to your Static Site settings
-2. Navigate to **"Redirects/Rewrites"**
+1. Go to your Static Site settings in the Render Dashboard.
+2. Navigate to **"Redirects/Rewrites"**.
 3. Add a rewrite rule:
 
 | Source | Destination | Action |
 |--------|-------------|--------|
 | `/*` | `/index.html` | Rewrite |
+
+*Note: This is critical for React apps using React Router. Without this, refreshing the page on a sub-route will result in a 404 error.*
 
 ### Step 4: Deploy
 
