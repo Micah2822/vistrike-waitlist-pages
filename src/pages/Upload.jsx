@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import Processing from '../components/Processing'
 import Results from '../components/Results'
 import Newsletter from '../components/Newsletter'
@@ -270,7 +271,7 @@ function Upload() {
                 Built by boxers for boxers and coaches.
               </p>
               <div className="footer-links">
-                <a href="/privacy">Privacy</a>
+                <Link to="/privacy">Privacy</Link>
                 <span className="separator">·</span>
                 <a href="https://tally.so/r/m6b09Y" target="_blank" rel="noopener noreferrer">Feedback</a>
                 <span className="separator">·</span>
