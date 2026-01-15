@@ -1,6 +1,6 @@
-# TACTIQ Spar - Static Site Deployment Guide
+# Vistrike - Static Site Deployment Guide
 
-This guide covers deploying TACTIQ Spar as a static site to various hosting platforms.
+This guide covers deploying Vistrike as a static site to various hosting platforms.
 
 ## Prerequisites
 

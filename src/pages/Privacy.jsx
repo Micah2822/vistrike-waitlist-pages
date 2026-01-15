@@ -10,11 +10,11 @@ function Privacy() {
       </div>
 
       <div className="privacy-content card">
-        <h3>TACTIQ Spar – Privacy Notice</h3>
+        <h3>Vistrike – Privacy Notice</h3>
         <p className="last-updated"><strong>Last updated:</strong> December 15, 2025</p>
         
         <p>
-          TACTIQ Spar ("we", "our", "us") respects your privacy and is committed to protecting your personal data. 
+          Vistrike ("we", "our", "us") respects your privacy and is committed to protecting your personal data. 
           This Privacy Notice explains how we collect, use, and store your information when you use our platform 
           to upload sparring videos or interact with our services.
         </p>
@@ -23,7 +23,7 @@ function Privacy() {
 
         <h4>1. Who We Are</h4>
         <p>
-          TACTIQ Spar is a platform that allows fighters and coaches to upload, analyse, and review sparring footage.
+          Vistrike is a platform that allows fighters and coaches to upload, analyse, and review sparring footage.
         </p>
         <p>
           If you have any questions about this notice or your data, please contact us at:{' '}
@@ -34,7 +34,7 @@ function Privacy() {
 
         <h4>2. How We Handle Your Videos</h4>
         <p>
-          TACTIQ Spar operates with a <strong>Privacy-First</strong> approach:
+          Vistrike operates with a <strong>Privacy-First</strong> approach:
         </p>
         <ul>
           <li>Your videos are processed but <strong>never stored on our servers</strong>.</li>
@@ -45,7 +45,7 @@ function Privacy() {
         <hr />
 
         <h4>3. What Data We Collect</h4>
-        <p>When you use TACTIQ Spar, we may collect and process the following types of data:</p>
+        <p>When you use Vistrike, we may collect and process the following types of data:</p>
         <ul>
           <li><strong>Uploaded Videos</strong> – including any visible or audible personal data (e.g. likeness, voice). These are processed temporarily and deleted immediately when you leave the page.</li>
           <li><strong>Metadata</strong> – such as upload time, file type, and device details.</li>
@@ -92,7 +92,7 @@ function Privacy() {
         <p>If you have questions, contact:</p>
         <p>
           <a href="https://tally.so/r/3XVA9P" target="_blank" rel="noopener noreferrer">Contact Form</a><br />
-          TACTIQ Spar
+          Vistrike
         </p>
       </div>
 

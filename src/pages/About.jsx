@@ -6,14 +6,14 @@ function About() {
     <div className="about-page">
       <div className="about-hero">
         <h1 className="logo-font">About Us</h1>
-        <p className="about-subtitle">The story behind TACTIQ Spar</p>
+        <p className="about-subtitle">The story behind Vistrike</p>
       </div>
 
       <div className="about-content card">
         <h3>Our Story</h3>
         
         <p>
-          TACTIQ Spar was born in the gym. Our founder, a former amateur boxer with years of 
+          Vistrike was born in the gym. Our founder, a former amateur boxer with years of 
           competitive experience, knew firsthand how difficult it was to get objective feedback 
           on sparring sessions. Coaches can only catch so much in real-time, and watching footage 
           back without proper tools meant hours of manual review.
@@ -31,7 +31,7 @@ function About() {
         <p>
           We believe every fighter deserves access to professional-level analysis. Whether you're 
           a beginner learning the fundamentals, an amateur preparing for competition, or a coach 
-          working with multiple athletes—TACTIQ Spar is designed to be accessible, affordable, 
+          working with multiple athletes—Vistrike is designed to be accessible, affordable, 
           and easy to use.
         </p>
 
@@ -41,7 +41,7 @@ function About() {
         <p>
           In boxing, the smallest details make the biggest difference. A slightly dropped guard, 
           a pattern in your combinations, a tendency to lean a certain way—these are the things 
-          that separate good fighters from great ones. TACTIQ Spar helps you see what you can't 
+          that separate good fighters from great ones. Vistrike helps you see what you can't 
           see in the moment, so you can train smarter and fight better.
         </p>
 

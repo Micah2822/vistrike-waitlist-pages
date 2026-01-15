@@ -1,8 +1,8 @@
-# TACTIQ Spar - Replit Configuration
+# Vistrike - Replit Configuration
 
 ## Overview
 
-TACTIQ Spar is a premium boxing sparring clip analyzer powered by AI. The application allows users to upload boxing/sparring video clips and receive instant visual insights including fighter tracking, punch metrics, and performance analytics. It's built as a React single-page application with a Vite build system, designed to be deployed as a static site with an optional backend API.
+Vistrike is a premium boxing sparring clip analyzer powered by AI. The application allows users to upload boxing/sparring video clips and receive instant visual insights including fighter tracking, punch metrics, and performance analytics. It's built as a React single-page application with a Vite build system, designed to be deployed as a static site with an optional backend API.
 
 ## User Preferences
 
