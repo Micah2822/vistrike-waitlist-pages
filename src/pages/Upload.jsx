@@ -96,8 +96,8 @@ function Upload() {
     <div className="upload-page">
       <div className="hero">
         <h1 className="logo-font">VISTRIKE</h1>
-        <p className="tagline logo-font">AI-POWERED BOXING ANALYSIS</p>
-        <p className="subtitle">Welcome to the future of Combat Sports.<span style={{ display: 'block', marginBottom: '0.75rem' }}></span>Powered by cutting edge AI, Vistrike delivers instant insights on every punch, fight, and training session straight to your phone. See your performance with precision and clarity.</p>
+        <p className="tagline logo-font">AI-POWERED COMBAT SPORTS</p>
+        <p className="subtitle">Vistrike helps you train smarter in combat sports using AI.<span style={{ display: 'block', marginBottom: '0.75rem' }}></span>Powered by our advanced computer vision model, Vistrike delivers instant visual insights on every punch, fight, and training session.</p>
       </div>
 
       <div className="waitlist-cta">
