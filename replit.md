@@ -1,24 +1,40 @@
-# Vistrike - Replit Configuration
+# VISTRKE - Replit Configuration
 
 ## Overview
 
-Vistrike is a premium boxing sparring clip analyzer powered by AI. The application allows users to upload boxing/sparring video clips and receive instant visual insights including fighter tracking, punch metrics, and performance analytics. It's built as a React single-page application with a Vite build system, designed to be deployed as a static site with an optional backend API.
+VISTRKE is a premium boxing sparring clip analyzer powered by AI. The application is currently a waitlist/beta signup page that allows users to join the beta and preview upcoming AI-powered fight analysis features. Built as a React single-page application with a Vite build system.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes (January 2026)
+
+- Complete UI redesign with new brand colors and futuristic tech aesthetic
+- Updated branding from "Vistrike" to "VISTRKE" 
+- New color scheme: Charcoal Black (#0A0A0C), White (#FFFFFF), Electric Blue (#2563EB) accent
+- Redesigned hero section with: "Visual intelligence for combat sports" headline
+- Modern glassmorphic newsletter/waitlist signup component
+- Fixed header with blur backdrop effect
+- Smooth fade-in animations and glow effects
+- Improved responsive design across all pages
+- Added ScrollToTop component for better navigation UX
+
 ## System Architecture
 
 ### Frontend Architecture
 - **Framework**: React 19 with Vite 7 as the build tool
-- **Routing**: React Router DOM v7 for client-side navigation
-- **Styling**: Custom CSS with CSS variables for theming (dark theme with accent colors)
+- **Routing**: React Router DOM v7 with HashRouter for client-side navigation
+- **Styling**: Custom CSS with CSS variables for theming (dark tech theme with blue accent)
 - **Component Structure**: 
-  - Pages located in `src/pages/` (Upload, About, Privacy)
+  - Pages located in `src/pages/` (Upload/Home, About, Privacy)
   - Reusable components in `src/components/` (Header, Newsletter, Processing, Results)
-- **Fonts**: Inter (Google Fonts) and Eurostile for branding
-- **UI Components**: Configured for shadcn/ui (New York style) but components not yet fully integrated
+- **Fonts**: Inter (primary font for modern look)
+- **Design System**: Custom CSS with futuristic tech aesthetic
+  - Fixed header with backdrop blur
+  - Glow effects and subtle grid backgrounds
+  - Smooth cubic-bezier transitions
+  - Glassmorphic components
 
 ### Build System
 - **Development**: Vite dev server on port 5000 with HMR
