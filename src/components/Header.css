@@ -81,19 +81,43 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: 16px 20px;
+    padding: 14px 16px;
+  }
+
+  .header-content {
+    gap: 16px;
   }
 
   .logo-text {
-    font-size: 18px;
-    letter-spacing: 0.15em;
+    font-size: 16px;
+    letter-spacing: 0.12em;
   }
 
   .nav {
-    gap: 20px;
+    gap: 16px;
   }
 
   .nav-link {
-    font-size: 13px;
+    font-size: 12px;
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 12px 14px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 11px;
   }
 }

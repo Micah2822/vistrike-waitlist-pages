@@ -421,50 +421,188 @@
 
 @media (max-width: 600px) {
   .hero-section {
-    padding: 100px 20px 60px;
+    padding: 90px 20px 50px;
     min-height: auto;
   }
 
   .hero-headline {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 16px;
   }
 
   .hero-subheadline {
-    font-size: 16px;
+    font-size: 15px;
+    margin-bottom: 16px;
   }
 
   .hero-body {
-    font-size: 15px;
-    margin-bottom: 32px;
+    font-size: 14px;
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+
+  .hero-glow {
+    width: 100%;
+    height: 400px;
+    top: 10%;
   }
 
   .preview-section {
-    padding: 60px 16px;
+    padding: 50px 16px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-badge {
+    padding: 6px 12px;
+    font-size: 11px;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
   }
 
   .demo-content {
-    padding: 20px 16px;
+    padding: 16px;
     border-radius: 16px;
   }
 
   .demo-videos {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    gap: 16px;
+  }
+
+  .demo-label {
+    font-size: 11px;
   }
 
   .video-wrapper {
     border-radius: 12px;
   }
 
+  .sample-results {
+    padding-top: 20px;
+  }
+
+  .results-grid {
+    gap: 10px;
+  }
+
+  .result-item {
+    padding: 14px 10px;
+    border-radius: 12px;
+  }
+
+  .result-label {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  .result-value {
+    font-size: 14px;
+  }
+
+  .result-comparison {
+    font-size: 16px;
+    gap: 6px;
+  }
+
+  .vs {
+    font-size: 10px;
+  }
+
   .features-section {
-    padding: 40px 0 60px;
+    padding: 40px 0 50px;
   }
 
   .reel-item {
-    min-width: 150px;
-    padding: 20px 16px;
+    min-width: 140px;
+    padding: 18px 14px;
+    gap: 8px;
+    border-radius: 12px;
+  }
+
+  .reel-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .reel-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .reel-item strong {
+    font-size: 13px;
+  }
+
+  .reel-item span {
+    font-size: 11px;
   }
 
   .page-footer {
     padding: 32px 16px;
+  }
+
+  .tech-info {
+    font-size: 13px;
+  }
+
+  .footer-links {
+    font-size: 13px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section {
+    padding: 85px 16px 40px;
+  }
+
+  .hero-headline {
+    font-size: 24px;
+  }
+
+  .hero-subheadline {
+    font-size: 14px;
+  }
+
+  .hero-body {
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .demo-content {
+    padding: 14px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .result-item {
+    padding: 12px 8px;
+  }
+
+  .result-comparison {
+    font-size: 15px;
+  }
+
+  .reel-item {
+    min-width: 130px;
+    padding: 16px 12px;
   }
 }
