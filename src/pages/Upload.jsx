@@ -302,6 +302,45 @@ function Upload() {
       )}
 
       {!processing && !results && (
+        <section className="use-cases-section" data-testid="section-use-cases">
+          <div className="use-cases-glow"></div>
+          <div className="use-cases-content">
+            <h2 className="use-cases-title">What fighters use it for today</h2>
+            <p className="use-cases-intro">Right now, fighters use Vistrike to:</p>
+            <ul className="use-cases-list">
+              <li>
+                <span className="use-case-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polygon points="23 7 16 12 23 17 23 7"/>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                  </svg>
+                </span>
+                <span className="use-case-text">Break down sparring and fights</span>
+              </li>
+              <li>
+                <span className="use-case-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </span>
+                <span className="use-case-text">Track patterns across sessions</span>
+              </li>
+              <li>
+                <span className="use-case-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 20h9"/>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                  </svg>
+                </span>
+                <span className="use-case-text">Get objective feedback without constant coaching</span>
+              </li>
+            </ul>
+            <p className="use-cases-future">In the future, the same technology will power analytics across the sport.</p>
+          </div>
+        </section>
+      )}
+
+      {!processing && !results && (
         <footer className="page-footer">
           <div className="footer-content">
             <p className="tech-info">Built by fighters, for fighters.</p>
