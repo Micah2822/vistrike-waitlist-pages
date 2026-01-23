@@ -168,7 +168,7 @@ function Upload() {
             Visual intelligence for combat sports
           </h1>
           <h2 className="hero-subheadline animate-fade-in animate-delay-1" data-testid="text-subheadline">
-            Powered by AI. Built for everyday fighters.
+            Built for everyday fighters. Powered by AI.
           </h2>
           <p className="hero-body animate-fade-in animate-delay-2" data-testid="text-body">
             Train smarter with real-time insights on every punch, every round, every session.
