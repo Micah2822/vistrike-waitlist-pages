@@ -23,7 +23,7 @@ function Newsletter() {
     formData.append('anticsrf', 'true')
 
     try {
-      await fetch('https://assets.mailerlite.com/jsonp/1989417/forms/174078332395062862/subscribe', {
+      await fetch('https://assets.mailerlite.com/jsonp/1989417/forms/177430094422213962/subscribe', {
         method: 'POST',
         body: formData,
         mode: 'no-cors'
