@@ -224,33 +224,58 @@ function Upload() {
             </div>
             
             <div className="sample-results">
-              <div className="results-grid">
-                <div className="result-item winner">
-                  <span className="result-label">AI Verdict</span>
-                  <span className="result-value">Fighter 1 (Red) Wins</span>
+              <div className="verdict-banner">
+                <div className="verdict-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
                 </div>
-                <div className="result-item">
-                  <span className="result-label">Punches Thrown</span>
-                  <div className="result-comparison">
-                    <span className="fighter-red">4</span>
-                    <span className="vs">vs</span>
-                    <span className="fighter-blue">3</span>
+                <div className="verdict-text">
+                  <span className="verdict-label">AI Verdict</span>
+                  <span className="verdict-winner">Red Corner Wins</span>
+                </div>
+              </div>
+              
+              <div className="stats-row">
+                <div className="stat-block">
+                  <span className="stat-title">Punches Thrown</span>
+                  <div className="stat-bars">
+                    <div className="stat-fighter red">
+                      <span className="stat-num">4</span>
+                      <div className="stat-bar" style={{width: '80%'}}></div>
+                    </div>
+                    <div className="stat-fighter blue">
+                      <span className="stat-num">3</span>
+                      <div className="stat-bar" style={{width: '60%'}}></div>
+                    </div>
                   </div>
                 </div>
-                <div className="result-item">
-                  <span className="result-label">Punches Landed</span>
-                  <div className="result-comparison">
-                    <span className="fighter-red">3</span>
-                    <span className="vs">vs</span>
-                    <span className="fighter-blue">1</span>
+                
+                <div className="stat-block">
+                  <span className="stat-title">Punches Landed</span>
+                  <div className="stat-bars">
+                    <div className="stat-fighter red">
+                      <span className="stat-num">3</span>
+                      <div className="stat-bar" style={{width: '75%'}}></div>
+                    </div>
+                    <div className="stat-fighter blue">
+                      <span className="stat-num">1</span>
+                      <div className="stat-bar" style={{width: '25%'}}></div>
+                    </div>
                   </div>
                 </div>
-                <div className="result-item">
-                  <span className="result-label">Accuracy</span>
-                  <div className="result-comparison">
-                    <span className="fighter-red">75%</span>
-                    <span className="vs">vs</span>
-                    <span className="fighter-blue">33%</span>
+                
+                <div className="stat-block">
+                  <span className="stat-title">Accuracy</span>
+                  <div className="stat-bars">
+                    <div className="stat-fighter red">
+                      <span className="stat-num">75%</span>
+                      <div className="stat-bar" style={{width: '75%'}}></div>
+                    </div>
+                    <div className="stat-fighter blue">
+                      <span className="stat-num">33%</span>
+                      <div className="stat-bar" style={{width: '33%'}}></div>
+                    </div>
                   </div>
                 </div>
               </div>

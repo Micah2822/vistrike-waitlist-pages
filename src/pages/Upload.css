@@ -242,120 +242,123 @@
 .sample-results {
   position: relative;
   z-index: 1;
-  padding-top: 28px;
-  margin-top: 8px;
+  padding-top: 24px;
 }
 
-.results-grid {
+/* Verdict Banner */
+.verdict-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.12) 0%, rgba(239, 68, 68, 0.04) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.verdict-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(239, 68, 68, 0.15);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.verdict-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #f87171;
+}
+
+.verdict-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.verdict-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.verdict-winner {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f87171;
+}
+
+/* Stats Row */
+.stats-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
-.result-item {
-  background: rgba(10, 10, 12, 0.9);
-  border: 1px solid var(--border-primary);
+.stat-block {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
-  padding: 18px 14px;
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  padding: 16px;
 }
 
-.result-item::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 40%);
-  pointer-events: none;
-}
-
-.result-item:hover {
-  border-color: var(--border-secondary);
-  transform: translateY(-1px);
-}
-
-.result-item.winner {
-  grid-column: 1 / -1;
-  border: none;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(37, 99, 235, 0.08) 100%);
-  box-shadow: 0 0 40px rgba(37, 99, 235, 0.2), inset 0 0 0 1px rgba(37, 99, 235, 0.4);
-  padding: 22px 20px;
-  position: relative;
-}
-
-.result-item.winner::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
-}
-
-.result-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 9px;
-  font-weight: 700;
+.stat-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 10px;
-  padding: 4px 10px;
-  background: rgba(255,255,255,0.04);
-  border-radius: 100px;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
 }
 
-.result-item.winner .result-label {
-  background: rgba(37, 99, 235, 0.15);
-  color: var(--accent-light);
+.stat-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.result-value {
-  font-size: 15px;
+.stat-fighter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-num {
+  font-size: 16px;
   font-weight: 700;
-  color: var(--text-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
+  min-width: 36px;
+  text-align: right;
 }
 
-.result-item.winner .result-value {
-  font-size: 17px;
-  color: #fff;
-  text-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+.stat-fighter.red .stat-num {
+  color: #f87171;
 }
 
-.result-comparison {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 20px;
-  font-weight: 800;
+.stat-fighter.blue .stat-num {
+  color: #60a5fa;
 }
 
-.fighter-red {
-  color: var(--fighter-red);
-  text-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+.stat-bar {
+  height: 8px;
+  border-radius: 4px;
+  transition: width 0.5s ease;
 }
 
-.fighter-blue {
-  color: var(--fighter-blue);
-  text-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+.stat-fighter.red .stat-bar {
+  background: linear-gradient(90deg, #ef4444 0%, #f87171 100%);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
 }
 
-.vs {
-  color: var(--text-muted);
-  font-size: 10px;
-  font-weight: 600;
-  opacity: 0.6;
+.stat-fighter.blue .stat-bar {
+  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
 }
 
 .upload-section {
@@ -491,12 +494,17 @@
 }
 
 @media (max-width: 900px) {
-  .results-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .stats-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
-  .result-item.winner {
-    grid-column: 1 / -1;
+  .stat-block {
+    padding: 14px 16px;
+  }
+
+  .stat-fighter {
+    gap: 10px;
   }
 }
 
@@ -506,16 +514,22 @@
     gap: 24px;
   }
 
-  .results-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+  .verdict-banner {
+    padding: 16px 18px;
+    gap: 14px;
   }
 
-  .result-item {
-    padding: 16px 12px;
+  .verdict-icon {
+    width: 38px;
+    height: 38px;
   }
 
-  .result-comparison {
+  .verdict-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .verdict-winner {
     font-size: 18px;
   }
 }
@@ -602,34 +616,49 @@
   }
 
   .sample-results {
-    padding-top: 20px;
+    padding-top: 18px;
   }
 
-  .results-grid {
-    gap: 10px;
+  .verdict-banner {
+    padding: 14px 16px;
+    gap: 12px;
+    margin-bottom: 16px;
   }
 
-  .result-item {
-    padding: 14px 10px;
-    border-radius: 12px;
+  .verdict-icon {
+    width: 36px;
+    height: 36px;
   }
 
-  .result-label {
+  .verdict-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .verdict-label {
     font-size: 10px;
-    margin-bottom: 6px;
   }
 
-  .result-value {
-    font-size: 14px;
-  }
-
-  .result-comparison {
+  .verdict-winner {
     font-size: 16px;
-    gap: 6px;
   }
 
-  .vs {
+  .stat-block {
+    padding: 12px 14px;
+  }
+
+  .stat-title {
     font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .stat-num {
+    font-size: 14px;
+    min-width: 32px;
+  }
+
+  .stat-bar {
+    height: 6px;
   }
 
   .features-section {
@@ -700,17 +729,41 @@
     padding: 14px;
   }
 
-  .results-grid {
-    grid-template-columns: 1fr 1fr;
+  .verdict-banner {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .verdict-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .verdict-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .verdict-winner {
+    font-size: 15px;
+  }
+
+  .stat-block {
+    padding: 10px 12px;
+  }
+
+  .stat-fighter {
     gap: 8px;
   }
 
-  .result-item {
-    padding: 12px 8px;
+  .stat-num {
+    font-size: 13px;
+    min-width: 28px;
   }
 
-  .result-comparison {
-    font-size: 15px;
+  .stat-bar {
+    height: 5px;
   }
 
   .reel-item {
