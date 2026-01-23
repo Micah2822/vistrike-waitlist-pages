@@ -341,35 +341,29 @@ function Upload() {
       )}
 
       {!processing && !results && (
-        <section className="why-section" data-testid="section-why">
-          <div className="why-glow"></div>
-          <div className="why-content">
-            <h2 className="why-title">Why Vistrike</h2>
-            <ul className="why-list">
+        <section className="beta-section" data-testid="section-beta">
+          <div className="beta-glow"></div>
+          <div className="beta-content">
+            <h2 className="beta-title">Join the beta</h2>
+            <p className="beta-intro">We're opening early access to a small group of fighters.</p>
+            <p className="beta-subtitle">As a beta tester, you'll:</p>
+            <ul className="beta-list">
               <li>
-                <span className="why-bullet"></span>
-                <span className="why-text">Made for <strong>amateur boxing first</strong></span>
+                <span className="beta-bullet"></span>
+                <span className="beta-text">Get early access to Vistrike</span>
               </li>
               <li>
-                <span className="why-bullet"></span>
-                <span className="why-text">Designed to be <strong>easy to understand</strong></span>
+                <span className="beta-bullet"></span>
+                <span className="beta-text">Help shape how the platform develops</span>
               </li>
               <li>
-                <span className="why-bullet"></span>
-                <span className="why-text">Works with normal training footage</span>
-              </li>
-              <li>
-                <span className="why-bullet"></span>
-                <span className="why-text">Helps replace missing coaching hours</span>
-              </li>
-              <li>
-                <span className="why-bullet"></span>
-                <span className="why-text">Built to improve with you over time</span>
+                <span className="beta-bullet"></span>
+                <span className="beta-text">Be part of the first wave using AI to train smarter</span>
               </li>
             </ul>
-            <div className="why-closing">
-              <p className="why-not">This isn't built for analysts.</p>
-              <p className="why-for">It's built for fighters.</p>
+            <div className="beta-cta">
+              <Newsletter />
+              <p className="beta-microcopy">No spam. Just early access.</p>
             </div>
           </div>
         </section>

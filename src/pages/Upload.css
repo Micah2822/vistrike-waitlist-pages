@@ -529,27 +529,27 @@
   border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
-/* Why Vistrike Section */
-.why-section {
+/* Beta Section */
+.beta-section {
   position: relative;
   padding: 80px 24px 100px;
   overflow: hidden;
   background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
 }
 
-.why-glow {
+.beta-glow {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 700px;
   height: 400px;
-  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.1) 0%, transparent 60%);
   filter: blur(60px);
   pointer-events: none;
 }
 
-.why-content {
+.beta-content {
   position: relative;
   z-index: 1;
   max-width: 550px;
@@ -557,66 +557,68 @@
   text-align: center;
 }
 
-.why-title {
+.beta-title {
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   letter-spacing: -0.02em;
 }
 
-.why-list {
+.beta-intro {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.beta-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.beta-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 48px;
+  margin: 0 0 40px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
   text-align: left;
 }
 
-.why-list li {
+.beta-list li {
   display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.beta-bullet {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.beta-text {
+  font-size: 16px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.beta-cta {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.why-bullet {
-  flex-shrink: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 12px var(--accent-glow);
-}
-
-.why-text {
-  font-size: 17px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-.why-text strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.why-closing {
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.why-not {
-  font-size: 16px;
+.beta-microcopy {
+  font-size: 13px;
   color: var(--text-muted);
-  margin-bottom: 8px;
-}
-
-.why-for {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--accent-light);
-  text-shadow: 0 0 20px var(--accent-glow);
 }
 
 .page-footer {
@@ -758,44 +760,50 @@
     padding: 16px 18px;
   }
 
-  .why-section {
+  .beta-section {
     padding: 60px 16px 70px;
   }
 
-  .why-glow {
+  .beta-glow {
     width: 100%;
     height: 300px;
   }
 
-  .why-title {
+  .beta-title {
     font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .beta-intro {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .beta-subtitle {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .beta-list {
+    gap: 12px;
     margin-bottom: 32px;
   }
 
-  .why-list {
-    gap: 14px;
-    margin-bottom: 36px;
+  .beta-list li {
+    gap: 10px;
   }
 
-  .why-list li {
-    gap: 12px;
+  .beta-bullet {
+    width: 6px;
+    height: 6px;
   }
 
-  .why-bullet {
-    width: 8px;
-    height: 8px;
-  }
-
-  .why-text {
-    font-size: 15px;
-  }
-
-  .why-not {
+  .beta-text {
     font-size: 14px;
   }
 
-  .why-for {
-    font-size: 18px;
+  .beta-microcopy {
+    font-size: 12px;
   }
 
   .hero-section {
