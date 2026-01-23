@@ -185,7 +185,7 @@ function Upload() {
           <div className="section-header">
             <span className="section-badge">Coming Soon</span>
             <h2 className="section-title">A sneak peek</h2>
-            <p className="section-subtitle">See how VISTRKE transforms your training footage</p>
+            <p className="section-subtitle">See how VISTRIKE transforms your training footage</p>
           </div>
           
           <div className="demo-content">
