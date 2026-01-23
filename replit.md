@@ -1,8 +1,8 @@
-# VISTRKE - Replit Configuration
+# VISTRIKE - Replit Configuration
 
 ## Overview
 
-VISTRKE is a premium boxing sparring clip analyzer powered by AI. The application is currently a waitlist/beta signup page that allows users to join the beta and preview upcoming AI-powered fight analysis features. Built as a React single-page application with a Vite build system.
+VISTRIKE is a premium boxing sparring clip analyzer powered by AI. The application is currently a waitlist/beta signup page that allows users to join the beta and preview upcoming AI-powered fight analysis features. Built as a React single-page application with a Vite build system.
 
 ## User Preferences
 
@@ -11,7 +11,7 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes (January 2026)
 
 - Complete UI redesign with new brand colors and futuristic tech aesthetic
-- Updated branding from "Vistrike" to "VISTRKE" 
+- Updated branding to "VISTRIKE" (all caps) 
 - New color scheme: Charcoal Black (#0A0A0C), White (#FFFFFF), Electric Blue (#2563EB) accent
 - Redesigned hero section with: "Visual intelligence for combat sports" headline
 - Modern glassmorphic newsletter/waitlist signup component

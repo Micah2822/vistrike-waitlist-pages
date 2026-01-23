@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <Link to="/" className="logo" data-testid="link-home">
-          <span className="logo-text">VISTRKE</span>
+          <span className="logo-text">VISTRIKE</span>
         </Link>
         <nav className="nav">
           <a 
