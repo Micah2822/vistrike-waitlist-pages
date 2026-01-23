@@ -165,7 +165,7 @@ function Upload() {
         
         <div className="hero-content">
           <h1 className="hero-headline animate-fade-in" data-testid="text-headline">
-            Visual Intelligence for Combat Sports
+            Visual intelligence for combat sports
           </h1>
           <h2 className="hero-subheadline animate-fade-in animate-delay-1" data-testid="text-subheadline">
             Built for everyday fighters. Powered by AI.
