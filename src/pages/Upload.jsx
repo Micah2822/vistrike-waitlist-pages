@@ -7,6 +7,69 @@ import './Upload.css'
 
 const MAX_FILE_SIZE_MB = 50
 
+const features = [
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="10"/>
+        <circle cx="12" cy="12" r="6"/>
+        <circle cx="12" cy="12" r="2"/>
+      </svg>
+    ),
+    title: 'Real-Time Detection',
+    subtitle: 'Frame-by-frame tracking'
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+      </svg>
+    ),
+    title: 'Complete Metrics',
+    subtitle: 'Punches, accuracy, stance'
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+      </svg>
+    ),
+    title: 'AI Verdict',
+    subtitle: 'Objective winner analysis'
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+    ),
+    title: 'Personal AI Coach',
+    subtitle: 'Live feedback and drills'
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <path d="M3 9h18M9 21V9"/>
+      </svg>
+    ),
+    title: 'Technique Breakdown',
+    subtitle: 'Form analysis'
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    ),
+    title: 'Community',
+    subtitle: 'Compete with others'
+  }
+]
+
 function Upload() {
   const [file, setFile] = useState(null)
   const [processing, setProcessing] = useState(false)
@@ -94,56 +157,79 @@ function Upload() {
 
   return (
     <div className="upload-page">
-      <div className="hero">
-        <h1 className="logo-font">VISTRIKE</h1>
-        <p className="tagline logo-font">AI-POWERED COMBAT SPORTS</p>
-        <p className="subtitle">Vistrike helps combat sport athletes train smarter using AI.<span style={{ display: 'block', marginBottom: '0.75rem' }}></span>Powered by our advanced computer vision model, Vistrike delivers instant visual insights on every punch, fight, and training session.</p>
-      </div>
-
-      <div className="waitlist-cta">
-        <Newsletter />
+      <div className="hero-section">
+        <div className="hero-background">
+          <div className="hero-glow"></div>
+          <div className="hero-grid"></div>
+        </div>
+        
+        <div className="hero-content">
+          <h1 className="hero-headline animate-fade-in" data-testid="text-headline">
+            Visual intelligence for combat sports
+          </h1>
+          <h2 className="hero-subheadline animate-fade-in animate-delay-1" data-testid="text-subheadline">
+            Powered by AI. Built for everyday fighters.
+          </h2>
+          <p className="hero-body animate-fade-in animate-delay-2" data-testid="text-body">
+            Train smarter with real-time insights on every punch, every round, every session.
+          </p>
+          
+          <div className="hero-cta animate-fade-in animate-delay-3">
+            <Newsletter />
+          </div>
+        </div>
       </div>
 
       {!processing && !results && (
-        <section className="preview-section">
-          <div className="coming-soon-banner">Coming Soon</div>
-          <h2 className="section-title">A sneak peek</h2>
+        <section className="preview-section" data-testid="section-preview">
+          <div className="section-header">
+            <span className="section-badge">Coming Soon</span>
+            <h2 className="section-title">A sneak peek</h2>
+            <p className="section-subtitle">See how VISTRKE transforms your training footage</p>
+          </div>
+          
           <div className="demo-content">
             <div className="demo-videos">
               <div className="demo-video-container">
                 <span className="demo-label">Before</span>
-                <video 
-                  className="demo-video"
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                >
-                  <source src="/assets/demo-before.mov" type="video/quicktime" />
-                  <source src="/assets/demo-before.mov" type="video/mp4" />
-                </video>
+                <div className="video-wrapper">
+                  <video 
+                    className="demo-video"
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    data-testid="video-before"
+                  >
+                    <source src="/assets/demo-before.mov" type="video/quicktime" />
+                    <source src="/assets/demo-before.mov" type="video/mp4" />
+                  </video>
+                </div>
               </div>
               <div className="demo-video-container">
-                <span className="demo-label">After</span>
-                <video 
-                  className="demo-video processed"
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                >
-                  <source src="/assets/demo-after.mp4" type="video/mp4" />
-                </video>
+                <span className="demo-label accent">After</span>
+                <div className="video-wrapper processed">
+                  <video 
+                    className="demo-video"
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    data-testid="video-after"
+                  >
+                    <source src="/assets/demo-after.mp4" type="video/mp4" />
+                  </video>
+                </div>
               </div>
             </div>
             
             <div className="sample-results">
               <div className="results-grid">
-                <div className="result-item winner centered">
+                <div className="result-item winner">
                   <span className="result-label">AI Verdict</span>
                   <span className="result-value">Fighter 1 (Red) Wins</span>
                 </div>
-                <div className="result-item punches">
+                <div className="result-item">
                   <span className="result-label">Punches Thrown</span>
                   <div className="result-comparison">
                     <span className="fighter-red">4</span>
@@ -151,7 +237,7 @@ function Upload() {
                     <span className="fighter-blue">3</span>
                   </div>
                 </div>
-                <div className="result-item punches">
+                <div className="result-item">
                   <span className="result-label">Punches Landed</span>
                   <div className="result-comparison">
                     <span className="fighter-red">3</span>
@@ -159,7 +245,7 @@ function Upload() {
                     <span className="fighter-blue">1</span>
                   </div>
                 </div>
-                <div className="result-item centered">
+                <div className="result-item">
                   <span className="result-label">Accuracy</span>
                   <div className="result-comparison">
                     <span className="fighter-red">75%</span>
@@ -184,106 +270,41 @@ function Upload() {
       </section>
 
       {!processing && !results && (
-        <section className="features-section">
-          <h2 className="section-subtitle">Features Coming Soon</h2>
+        <section className="features-section" data-testid="section-features">
+          <div className="section-header">
+            <h2 className="section-title">Features Coming Soon</h2>
+          </div>
           <div className="features-reel">
             <div className="features-track">
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-                <strong>Real-Time Detection</strong>
-                <span>Frame-by-frame tracking</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8c0-2.2-1.8-4-4-4s-4 1.8-4 4c0 1.5.8 2.7 2 3.4V14l-6 6h4v2h6v-2h4l-6-6v-2.6c1.2-.7 2-1.9 2-3.4z"/></svg>
-                <strong>Complete Metrics</strong>
-                <span>Punches, accuracy, stance</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-                <strong>AI Verdict</strong>
-                <span>Objective winner analysis</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                <strong>Personal AI Coach</strong>
-                <span>Live feedback and drills</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                <strong>Technique Breakdown</strong>
-                <span>Form analysis</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                <strong>Performance Trends</strong>
-                <span>Track your progress</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                <strong>Community Leaderboard</strong>
-                <span>Compete with others</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-                <strong>Real-Time Detection</strong>
-                <span>Frame-by-frame tracking</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8c0-2.2-1.8-4-4-4s-4 1.8-4 4c0 1.5.8 2.7 2 3.4V14l-6 6h4v2h6v-2h4l-6-6v-2.6c1.2-.7 2-1.9 2-3.4z"/></svg>
-                <strong>Complete Metrics</strong>
-                <span>Punches, accuracy, stance</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-                <strong>AI Verdict</strong>
-                <span>Objective winner analysis</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                <strong>Personal AI Coach</strong>
-                <span>Live feedback and drills</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                <strong>Technique Breakdown</strong>
-                <span>Form analysis</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                <strong>Performance Trends</strong>
-                <span>Track your progress</span>
-              </div>
-              <div className="reel-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                <strong>Community Leaderboard</strong>
-                <span>Compete with others</span>
-              </div>
+              {[...features, ...features].map((feature, index) => (
+                <div className="reel-item" key={index}>
+                  <div className="reel-icon">{feature.icon}</div>
+                  <strong>{feature.title}</strong>
+                  <span>{feature.subtitle}</span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
       )}
 
       {!processing && !results && (
-        <>
-          <footer className="page-footer">
-            <div className="footer-content">
-              <p className="tech-info">
-                Built by boxers for boxers and coaches.
-              </p>
-              <div className="footer-links">
-                <Link to="/privacy">Privacy</Link>
-                <span className="separator">·</span>
-                <a href="https://tally.so/r/m6b09Y" target="_blank" rel="noopener noreferrer">Feedback</a>
-                <span className="separator">·</span>
-                <a href="https://www.instagram.com/vistrike_ai" target="_blank" rel="noopener noreferrer" className="instagram-link">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </a>
-              </div>
+        <footer className="page-footer">
+          <div className="footer-content">
+            <p className="tech-info">Built by fighters, for fighters.</p>
+            <div className="footer-links">
+              <Link to="/privacy" data-testid="link-privacy">Privacy</Link>
+              <span className="separator"></span>
+              <a href="https://tally.so/r/m6b09Y" target="_blank" rel="noopener noreferrer" data-testid="link-footer-feedback">Feedback</a>
+              <span className="separator"></span>
+              <a href="https://www.instagram.com/vistrike_ai" target="_blank" rel="noopener noreferrer" className="instagram-link" data-testid="link-instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
             </div>
-          </footer>
-        </>
+          </div>
+        </footer>
       )}
     </div>
   )

@@ -5,8 +5,8 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <Link to="/" className="logo logo-font">
-          VISTRIKE
+        <Link to="/" className="logo" data-testid="link-home">
+          <span className="logo-text">VISTRKE</span>
         </Link>
         <nav className="nav">
           <a 
@@ -14,10 +14,11 @@ function Header() {
             target="_blank" 
             rel="noopener noreferrer"
             className="nav-link"
+            data-testid="link-feedback"
           >
-            Share Feedback
+            Feedback
           </a>
-          <Link to="/about" className="nav-link">
+          <Link to="/about" className="nav-link" data-testid="link-about">
             About
           </Link>
         </nav>
