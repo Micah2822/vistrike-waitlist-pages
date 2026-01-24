@@ -335,7 +335,6 @@ function Upload() {
                 <span className="use-case-text">Get objective feedback without constant coaching</span>
               </li>
             </ul>
-            <p className="use-cases-future">In the future, the same technology will power analytics across the sport.</p>
           </div>
         </section>
       )}
