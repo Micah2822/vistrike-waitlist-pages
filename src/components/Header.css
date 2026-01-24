@@ -81,6 +81,30 @@
 
 @media (max-width: 768px) {
   .header {
+    padding: 20px 24px;
+  }
+
+  .header-content {
+    gap: 20px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    letter-spacing: 0.15em;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
     padding: 18px 20px;
   }
 
@@ -94,30 +118,11 @@
   }
 
   .nav {
-    gap: 18px;
+    gap: 16px;
   }
 
   .nav-link {
     font-size: 13px;
     padding: 6px 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .header {
-    padding: 16px 16px;
-  }
-
-  .logo-text {
-    font-size: 16px;
-    letter-spacing: 0.1em;
-  }
-
-  .nav {
-    gap: 14px;
-  }
-
-  .nav-link {
-    font-size: 12px;
   }
 }
