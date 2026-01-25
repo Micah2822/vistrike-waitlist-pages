@@ -210,6 +210,513 @@ color: #FFFFFF;
 
 ---
 
+## Video Frame (Futuristic Display)
+
+A cinematic video container with glowing corner accents and animated effects.
+
+### Video Frame Container
+```css
+.video-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: visible;
+  background: rgba(10, 10, 15, 0.8);
+  border: 2px solid rgba(37, 99, 235, 0.4);
+  box-shadow: 
+    0 0 60px rgba(37, 99, 235, 0.2),
+    0 0 120px rgba(37, 99, 235, 0.1),
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+```
+
+### Corner Accent Marks
+Glowing L-shaped corner marks on all four corners of the frame.
+
+```css
+.frame-corner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  z-index: 10;
+}
+
+.frame-corner::before,
+.frame-corner::after {
+  content: '';
+  position: absolute;
+  background: rgba(37, 99, 235, 0.8);
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+}
+
+/* Top-left corner */
+.frame-corner.top-left { top: -2px; left: -2px; }
+.frame-corner.top-left::before { width: 24px; height: 3px; top: 0; left: 0; }
+.frame-corner.top-left::after { width: 3px; height: 24px; top: 0; left: 0; }
+
+/* Top-right corner */
+.frame-corner.top-right { top: -2px; right: -2px; }
+.frame-corner.top-right::before { width: 24px; height: 3px; top: 0; right: 0; }
+.frame-corner.top-right::after { width: 3px; height: 24px; top: 0; right: 0; }
+
+/* Bottom-left corner */
+.frame-corner.bottom-left { bottom: -2px; left: -2px; }
+.frame-corner.bottom-left::before { width: 24px; height: 3px; bottom: 0; left: 0; }
+.frame-corner.bottom-left::after { width: 3px; height: 24px; bottom: 0; left: 0; }
+
+/* Bottom-right corner */
+.frame-corner.bottom-right { bottom: -2px; right: -2px; }
+.frame-corner.bottom-right::before { width: 24px; height: 3px; bottom: 0; right: 0; }
+.frame-corner.bottom-right::after { width: 3px; height: 24px; bottom: 0; right: 0; }
+```
+
+### Frame Glow Animation
+Animated glow effect behind the video frame.
+
+```css
+.frame-glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.3) 0%, transparent 30%, transparent 70%, rgba(139, 92, 246, 0.2) 100%);
+  z-index: -1;
+  filter: blur(20px);
+  animation: frameGlow 3s ease-in-out infinite;
+}
+
+@keyframes frameGlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+```
+
+### Video Element
+```css
+.showcase-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+}
+```
+
+### Video Overlay (Subtle Gradient)
+```css
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.05) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(10, 10, 15, 0.3) 100%
+  );
+  pointer-events: none;
+}
+```
+
+### JSX Structure
+```jsx
+<div className="video-frame">
+  <div className="frame-corner top-left"></div>
+  <div className="frame-corner top-right"></div>
+  <div className="frame-corner bottom-left"></div>
+  <div className="frame-corner bottom-right"></div>
+  <div className="frame-glow"></div>
+  <video className="showcase-video" autoPlay loop muted playsInline>
+    <source src="/assets/video.mp4" type="video/mp4" />
+  </video>
+  <div className="video-overlay"></div>
+</div>
+```
+
+---
+
+## Analysis Dashboard (Fighter Report)
+
+A glassmorphism dashboard for displaying fighter statistics and insights.
+
+### Dashboard Container
+```css
+.analysis-dashboard {
+  margin-top: 48px;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(37, 99, 235, 0.08);
+}
+```
+
+### Dashboard Header
+```css
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.dashboard-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(139, 92, 246, 0.15) 100%);
+  color: var(--accent-light); /* #3B82F6 */
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.dashboard-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary); /* #FFFFFF */
+  margin: 0;
+}
+```
+
+### Fighter Cards
+Side-by-side comparison cards for Blue and Red corners.
+
+```css
+.fighters-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 32px;
+}
+
+.fighter-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Blue corner accent */
+.fighter-card.blue-corner {
+  border-left: 3px solid #3B82F6;
+}
+
+/* Red corner accent */
+.fighter-card.red-corner {
+  border-left: 3px solid #EF4444;
+}
+```
+
+### Corner Indicator (Glowing Dot)
+```css
+.corner-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.corner-indicator.blue {
+  background: #3B82F6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.corner-indicator.red {
+  background: #EF4444;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+```
+
+### Stat Rows
+```css
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-name {
+  font-size: 13px;
+  color: var(--text-muted); /* #71717A */
+  min-width: 70px;
+}
+
+.stat-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary); /* #FFFFFF */
+}
+```
+
+### Accuracy/Progress Bars
+```css
+.accuracy-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  max-width: 100px;
+}
+
+.accuracy-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #6B7280 0%, #9CA3AF 100%);
+  transition: width 0.5s ease;
+}
+
+/* Success variant (green) */
+.accuracy-bar.success .accuracy-fill {
+  background: linear-gradient(90deg, #22C55E 0%, #4ADE80 100%);
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+}
+
+/* Warning variant (amber) */
+.accuracy-bar.warning .accuracy-fill {
+  background: linear-gradient(90deg, #F59E0B 0%, #FBBF24 100%);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+.accuracy-text {
+  position: absolute;
+  right: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary); /* #A1A1AA */
+}
+```
+
+### Fighter Insight Box
+Quick insight callout with icon.
+
+```css
+.fighter-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 10px;
+  margin-top: auto;
+}
+
+.fighter-insight svg {
+  width: 16px;
+  height: 16px;
+  color: #FBBF24;
+  flex-shrink: 0;
+}
+
+.fighter-insight span {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Success variant */
+.fighter-insight.success {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.fighter-insight.success svg {
+  color: #4ADE80;
+}
+```
+
+### VS Divider
+```css
+.vs-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vs-divider span {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+```
+
+### Key Moments Timeline
+```css
+.key-moments {
+  margin-bottom: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.moments-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 16px;
+}
+
+.moment {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.moment.highlight {
+  background: rgba(34, 197, 94, 0.05);
+  border-color: rgba(34, 197, 94, 0.15);
+}
+
+.moment-time {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-family: monospace;
+  min-width: 36px;
+}
+
+.moment-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.moment-dot.blue {
+  background: #3B82F6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+.moment-dot.red {
+  background: #EF4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+.moment-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.moment.highlight .moment-text {
+  color: var(--text-primary);
+}
+```
+
+### Training Insights Cards
+```css
+.training-insights {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.insights-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 16px;
+}
+
+.insights-title svg {
+  width: 16px;
+  height: 16px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.insight-card {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.insight-card.blue {
+  border-left: 3px solid #3B82F6;
+}
+
+.insight-card.red {
+  border-left: 3px solid #EF4444;
+}
+
+.insight-corner {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.insight-card.blue .insight-corner {
+  color: #60A5FA;
+}
+
+.insight-card.red .insight-corner {
+  color: #F87171;
+}
+
+.insight-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+```
+
+### Responsive Behavior (Mobile)
+```css
+@media (max-width: 700px) {
+  .analysis-dashboard {
+    padding: 20px;
+    margin-top: 32px;
+    border-radius: 16px;
+  }
+  
+  .fighters-comparison {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .frame-corner {
+    width: 16px;
+    height: 16px;
+  }
+}
+```
+
+---
+
 ## Spacing Scale
 | Size | Value |
 |------|-------|
