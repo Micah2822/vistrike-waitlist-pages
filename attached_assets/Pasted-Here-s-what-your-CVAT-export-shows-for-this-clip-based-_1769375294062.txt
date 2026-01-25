@@ -1,0 +1,46 @@
+Here’s what your CVAT export shows for this clip (based on the punch + defense action labels, and the per-frame guard/exposure attributes on each fighter). 
+default
+Blue corner summary (throughout clip)
+Offense
+Punches thrown: 3 total
+2× jab to head (both lead hand): 1 blocked, 1 evaded
+1× rear hook to body (setup: touch_jab): blocked
+Landed (confirmed): 0
+Defense
+Defensive actions logged: 4 (all high_guard)
+vs uppercut: failed
+vs hook (head): failed
+vs body shot / hook: unknown outcomes (2)
+Pattern: when Red finally steps in with power (uppercut/hook), Blue’s high guard doesn’t stop the shots cleanly.
+Exposure / posture (from frame attributes)
+Blue spends a lot of time in high/mid guard, but there are stretches where exposure is tagged open/partial/unknown (especially around exchanges), suggesting inconsistent cover or annotation uncertainty.
+Actionable training focuses (Blue)
+Uppercut + hook defense from high guard: drill “elbows tight + rear hand glued + chin tucked” and add a default answer (catch → roll / catch → step-out).
+Stop entering naked: your jab attempts are mostly single, no-setup. Add feints, double-jab, or jab-to-body to earn reactions before committing.
+After a blocked shot, don’t freeze: build a simple sequence: jab (blocked) → step off-line → jab again / hook to body.
+Body protection on hooks: your only body attempt got blocked—work on changing level without dropping the opposite hand.
+Red corner summary (throughout clip)
+Offense
+Punches thrown: 4 total
+1× lead uppercut to head (step_in, inside lane): landed clean (heavy)
+1× rear hook to head (combo, outside lane): landed clean (heavy)
+2× lead hooks (head/body, combo): result = unknown (likely partial/graze or not confidently tagged)
+Landed (confirmed): 2 clean shots (both head, both heavy impact)
+Defense
+Defensive actions logged: 3, all successful
+high_guard vs jab (success)
+block_body vs body shot (success)
+slip_left vs jab (success)
+Pattern: early on, Red is disciplined defensively and shuts down Blue’s basic entries.
+Exposure / posture (from frame attributes)
+Red shows long stretches where centerline/chin exposure is “open” in the data—often around the later attacking sequence—suggesting that when Red opens up to punch, defensive responsibility drops (counter window risk).
+Actionable training focuses (Red)
+Keep your defense while you score: you’re landing big, but the clip flags you as open down the middle during offense—drill “punch → bring the hand home / head off-center.”
+Add a jab (or feint) layer: most of your offense here is hook/uppercut-based. Add jab → uppercut and jab → rear hook so entries are safer + more repeatable.
+Tighten combo endings: your last two hooks are tagged unknown—likely because they’re not clean/clear. Work on distance + placement so shots finish decisively (especially the body hook).
+Exploit Blue’s high guard weakness: your best moment is step-in uppercut then hook—make that a repeatable trap after you get Blue shelled up.
+Quick “fight story” of the clip (what happens when)
+Early exchange (frames ~24–51): Blue probes with jab/body hook; Red blocks/slips everything.
+Later exchange (frames ~121–152): Red steps in and lands a clean uppercut + clean hook; Blue’s high guard fails under pressure; Red continues hooking with less-clear outcomes. 
+default
+If you want, I can also output this as a simple scorecard-style breakdown (volume, success %, shot selection, defense success, exposure risk) that you can reuse across clips—same JSON format.

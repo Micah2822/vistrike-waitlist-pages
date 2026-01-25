@@ -216,40 +216,129 @@ function Upload() {
               <div className="video-overlay"></div>
             </div>
             
-            <div className="demo-stats-floating">
-              <div className="floating-stat">
-                <div className="stat-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <circle cx="12" cy="12" r="6"/>
-                    <circle cx="12" cy="12" r="2"/>
-                  </svg>
+            <div className="analysis-dashboard">
+              <div className="dashboard-header">
+                <span className="dashboard-badge">AI Analysis</span>
+                <h3 className="dashboard-title">Round Breakdown</h3>
+              </div>
+              
+              <div className="fighters-comparison">
+                <div className="fighter-card blue-corner">
+                  <div className="fighter-header">
+                    <span className="corner-indicator blue"></span>
+                    <span className="corner-label">Blue Corner</span>
+                  </div>
+                  <div className="fighter-stats">
+                    <div className="stat-row">
+                      <span className="stat-name">Punches</span>
+                      <span className="stat-number">3</span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-name">Accuracy</span>
+                      <div className="accuracy-bar">
+                        <div className="accuracy-fill" style={{width: '0%'}}></div>
+                        <span className="accuracy-text">0%</span>
+                      </div>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-name">Defense</span>
+                      <div className="accuracy-bar warning">
+                        <div className="accuracy-fill" style={{width: '0%'}}></div>
+                        <span className="accuracy-text">0/2</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="fighter-insight">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M12 16v-4M12 8h.01"/>
+                    </svg>
+                    <span>High guard failed vs uppercut + hook pressure</span>
+                  </div>
                 </div>
-                <div className="stat-info">
-                  <span className="stat-value">Real-time</span>
-                  <span className="stat-label">Detection</span>
+
+                <div className="vs-divider">
+                  <span>VS</span>
+                </div>
+
+                <div className="fighter-card red-corner">
+                  <div className="fighter-header">
+                    <span className="corner-indicator red"></span>
+                    <span className="corner-label">Red Corner</span>
+                  </div>
+                  <div className="fighter-stats">
+                    <div className="stat-row">
+                      <span className="stat-name">Punches</span>
+                      <span className="stat-number">4</span>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-name">Accuracy</span>
+                      <div className="accuracy-bar success">
+                        <div className="accuracy-fill" style={{width: '50%'}}></div>
+                        <span className="accuracy-text">50%</span>
+                      </div>
+                    </div>
+                    <div className="stat-row">
+                      <span className="stat-name">Defense</span>
+                      <div className="accuracy-bar success">
+                        <div className="accuracy-fill" style={{width: '100%'}}></div>
+                        <span className="accuracy-text">3/3</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="fighter-insight success">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>2 heavy head shots landed clean</span>
+                  </div>
                 </div>
               </div>
-              <div className="floating-stat">
-                <div className="stat-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                  </svg>
-                </div>
-                <div className="stat-info">
-                  <span className="stat-value">AI-Powered</span>
-                  <span className="stat-label">Analysis</span>
+
+              <div className="key-moments">
+                <h4 className="moments-title">Key Moments</h4>
+                <div className="moments-timeline">
+                  <div className="moment">
+                    <div className="moment-time">0:01</div>
+                    <div className="moment-event">
+                      <span className="moment-dot blue"></span>
+                      <span className="moment-text">Blue probes with jab — blocked</span>
+                    </div>
+                  </div>
+                  <div className="moment highlight">
+                    <div className="moment-time">0:04</div>
+                    <div className="moment-event">
+                      <span className="moment-dot red"></span>
+                      <span className="moment-text">Red step-in uppercut — landed clean</span>
+                    </div>
+                  </div>
+                  <div className="moment highlight">
+                    <div className="moment-time">0:05</div>
+                    <div className="moment-event">
+                      <span className="moment-dot red"></span>
+                      <span className="moment-text">Red rear hook — landed heavy</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="floating-stat">
-                <div className="stat-icon">
+
+              <div className="training-insights">
+                <h4 className="insights-title">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                   </svg>
-                </div>
-                <div className="stat-info">
-                  <span className="stat-value">Fighter</span>
-                  <span className="stat-label">Metrics</span>
+                  Training Focus
+                </h4>
+                <div className="insights-grid">
+                  <div className="insight-card blue">
+                    <span className="insight-corner">Blue</span>
+                    <p>Drill catch-and-roll defense against uppercuts. Add double-jab setups before power shots.</p>
+                  </div>
+                  <div className="insight-card red">
+                    <span className="insight-corner">Red</span>
+                    <p>Keep hands home after hooks. Repeat step-in uppercut to hook combo — it's working.</p>
+                  </div>
                 </div>
               </div>
             </div>

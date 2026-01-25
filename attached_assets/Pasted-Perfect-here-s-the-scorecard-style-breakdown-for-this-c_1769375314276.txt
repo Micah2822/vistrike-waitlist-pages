@@ -1,0 +1,91 @@
+Perfect — here’s the scorecard-style breakdown for this clip, using only what’s actually labeled in your Daturmo/CVAT export (punch + defense action labels, plus per-frame guard/exposure attributes). 
+default
+Note on interpretation: this JSON contains 7 punch events + 7 defense events total (so it’s a highlighted-events scorecard, not a full CompuBox of every punch thrown). Some outcomes are marked unknown, and Blue has several frames marked visibility: partial, which makes exposure/guard stats a bit noisier. 
+default
+Clip scorecard template (what you can reuse every time)
+For each fighter:
+Volume (thrown)
+Efficiency (landed / blocked / evaded / unknown)
+Shot selection (type, target, hand, lane, setups)
+Defense (actions + success rate + what beats them)
+Exposure profile (centerline/chin/body open vs covered)
+Key moments (frame ranges)
+Actionable training cues (2–4 bullets)
+BLUE corner — Scorecard
+1) Volume
+Punches thrown: 3 
+default
+2) Efficiency (results)
+Landed clean: 0 / 3 (0%)
+Blocked: 2 / 3 (66.7%)
+Evaded by opponent: 1 / 3 (33.3%) 
+default
+3) Shot selection
+Types: jab (2), hook (1)
+Targets: head (2), body (1)
+Hands: lead (2), rear (1)
+Lanes: centerline (2), outside (1)
+Setups: none (2), touch_jab → body hook (1) 
+default
+What it says: Blue is mostly single-shot probing (straight line) with limited variation and little setup, and isn’t getting past Red’s basic defense.
+4) Defense score
+Defense actions logged: 4 (all high guard)
+Outcomes: 2 failed, 2 unknown 
+default
+What beats Blue’s defense here: uppercut + hook pressure (high guard isn’t solving it). 
+default
+5) Exposure profile (per-frame attributes)
+Centerline “open” rate: ~33.7% of frames (with ~20.8% marked unknown)
+Body “open” rate (when fully visible): ~19.5%
+Guard over clip is mixed (high/mid/low/unknown), so posture consistency looks shaky. 
+default
+6) Key moments
+Frames ~24–51: Blue throws 3 shots; none land clean; Red defends successfully. 
+default
+Frames ~121–152: Blue is on defense; high guard fails vs head shots. 
+default
+7) Actionable training cues (Blue)
+Fix the “high guard still gets split” problem: drill catch → roll/step-out, and add a default answer to uppercuts (elbows tight + core braced + head position).
+Stop being predictable: add double jab / jab feint / jab-to-body before the power shot.
+Win after contact: if your jab gets blocked, don’t reset—go jab (blocked) → angle off → second shot.
+Body entry mechanics: practice level change without opening your chin/centerline (your only body attempt here gets read and blocked). 
+default
+RED corner — Scorecard
+1) Volume
+Punches thrown: 4 
+default
+2) Efficiency (results)
+Landed clean: 2 / 4 (50%) (both heavy head shots)
+Unknown outcome: 2 / 4 (50%) 
+default
+3) Shot selection
+Types: hook (3), uppercut (1)
+Targets: head (3), body (1)
+Hands: lead (3), rear (1)
+Lanes: outside (3), inside (1)
+Setups: step-in (uppercut), then combo hooks 
+default
+What it says: Red’s offense is high impact, mostly hook-led, with one clean inside entry (step-in uppercut) that works perfectly.
+4) Defense score
+Defense actions logged: 3
+Success: 3 / 3 successful (100%)
+high guard vs jab (success)
+block body vs body shot (success)
+slip left vs jab (success) 
+default
+5) Exposure profile (per-frame attributes)
+Centerline “open” rate: ~57.9% of frames
+Chin “open” rate: ~57.9% of frames
+Body: mostly partial, but open ~31.5% of frames 
+default
+Meaning: Red is defensively effective in the logged moments, but the posture/exposure tags suggest you’re giving counter windows while attacking (especially down the middle).
+6) Key moments
+Frame ~121: lead uppercut to head = landed clean (heavy) 
+default
+Frame ~127: rear hook to head = landed clean (heavy) 
+default
+7) Actionable training cues (Red)
+Keep your defense while you land: after every hook/uppercut, drill “hand back home + head off-center” (your exposure tags are screaming counter risk).
+Add a jab/feint layer: you’re winning with hooks/uppercut—make entries safer with jab → uppercut and jab → rear hook.
+Tighten combo endings: 2 shots are marked unknown—work on distance + clean finishing so scoring is unmistakable.
+Repeat the winning trap: step-in uppercut → hook is your money sequence vs Blue’s high guard
