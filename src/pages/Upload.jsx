@@ -182,89 +182,74 @@ function Upload() {
 
       {!processing && !results && (
         <section className="preview-section" data-testid="section-preview">
+          <div className="preview-background">
+            <div className="preview-glow"></div>
+            <div className="preview-glow-secondary"></div>
+            <div className="preview-grid"></div>
+            <div className="preview-scanlines"></div>
+          </div>
+          
           <div className="section-header">
             <span className="section-badge">Coming Soon</span>
             <h2 className="section-title">A sneak peek</h2>
             <p className="section-subtitle">See how Vistrike transforms your training footage</p>
           </div>
           
-          <div className="demo-content">
-            <div className="demo-videos">
-              <div className="demo-video-container">
-                <span className="demo-label">Before</span>
-                <div className="video-wrapper">
-                  <video 
-                    className="demo-video"
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                    data-testid="video-before"
-                  >
-                    <source src="/assets/demo-before.mov" type="video/quicktime" />
-                    <source src="/assets/demo-before.mov" type="video/mp4" />
-                  </video>
-                </div>
-              </div>
-              <div className="demo-video-container">
-                <span className="demo-label accent">After</span>
-                <div className="video-wrapper processed">
-                  <video 
-                    className="demo-video"
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                    data-testid="video-after"
-                  >
-                    <source src="/assets/demo-after.mp4" type="video/mp4" />
-                  </video>
-                </div>
-              </div>
+          <div className="demo-showcase">
+            <div className="video-frame">
+              <div className="frame-corner top-left"></div>
+              <div className="frame-corner top-right"></div>
+              <div className="frame-corner bottom-left"></div>
+              <div className="frame-corner bottom-right"></div>
+              <div className="frame-glow"></div>
+              <video 
+                className="showcase-video"
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                data-testid="video-preview"
+              >
+                <source src="/assets/demo-preview.mp4" type="video/mp4" />
+                <source src="/assets/demo-preview.mov" type="video/quicktime" />
+              </video>
+              <div className="video-overlay"></div>
             </div>
             
-            <div className="sample-results">
-              <div className="stats-row">
-                <div className="stat-block">
-                  <span className="stat-title">Punches Thrown</span>
-                  <div className="stat-bars">
-                    <div className="stat-fighter red">
-                      <span className="stat-num">4</span>
-                      <div className="stat-bar" style={{width: '80%'}}></div>
-                    </div>
-                    <div className="stat-fighter blue">
-                      <span className="stat-num">3</span>
-                      <div className="stat-bar" style={{width: '60%'}}></div>
-                    </div>
-                  </div>
+            <div className="demo-stats-floating">
+              <div className="floating-stat">
+                <div className="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="12" cy="12" r="6"/>
+                    <circle cx="12" cy="12" r="2"/>
+                  </svg>
                 </div>
-                
-                <div className="stat-block">
-                  <span className="stat-title">Punches Landed</span>
-                  <div className="stat-bars">
-                    <div className="stat-fighter red">
-                      <span className="stat-num">3</span>
-                      <div className="stat-bar" style={{width: '75%'}}></div>
-                    </div>
-                    <div className="stat-fighter blue">
-                      <span className="stat-num">1</span>
-                      <div className="stat-bar" style={{width: '25%'}}></div>
-                    </div>
-                  </div>
+                <div className="stat-info">
+                  <span className="stat-value">Real-time</span>
+                  <span className="stat-label">Detection</span>
                 </div>
-                
-                <div className="stat-block">
-                  <span className="stat-title">Accuracy</span>
-                  <div className="stat-bars">
-                    <div className="stat-fighter red">
-                      <span className="stat-num">75%</span>
-                      <div className="stat-bar" style={{width: '75%'}}></div>
-                    </div>
-                    <div className="stat-fighter blue">
-                      <span className="stat-num">33%</span>
-                      <div className="stat-bar" style={{width: '33%'}}></div>
-                    </div>
-                  </div>
+              </div>
+              <div className="floating-stat">
+                <div className="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </div>
+                <div className="stat-info">
+                  <span className="stat-value">AI-Powered</span>
+                  <span className="stat-label">Analysis</span>
+                </div>
+              </div>
+              <div className="floating-stat">
+                <div className="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                  </svg>
+                </div>
+                <div className="stat-info">
+                  <span className="stat-value">Fighter</span>
+                  <span className="stat-label">Metrics</span>
                 </div>
               </div>
             </div>
