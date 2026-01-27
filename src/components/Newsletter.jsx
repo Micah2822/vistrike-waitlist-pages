@@ -18,7 +18,7 @@ function Newsletter() {
     setStatus('loading')
 
     try {
-      const response = await fetch('https://formspree.io/f/xwpbqkdj', {
+      const response = await fetch('https://formspree.io/f/mqeqddyo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
