@@ -1,9 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Newsletter.css'
 
 function Newsletter() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle')
+
+  useEffect(() => {
+    const loadTallyScript = () => {
+      if (typeof window.Tally !== 'undefined') return
+      
+      const scriptSrc = 'https://tally.so/widgets/embed.js'
+      if (document.querySelector(`script[src="${scriptSrc}"]`)) return
+
+      const script = document.createElement('script')
+      script.src = scriptSrc
+      document.body.appendChild(script)
+    }
+
+    loadTallyScript()
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -17,19 +32,25 @@ function Newsletter() {
 
     setStatus('loading')
 
-    try {
-      const formData = new FormData()
-      formData.append('email', email)
-      
-      await fetch('https://tally.so/r/7RN5AR', {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
+    if (typeof window.Tally !== 'undefined') {
+      window.Tally.openPopup('7RN5AR', {
+        hiddenFields: {
+          email: email
+        },
+        onSubmit: () => {
+          setStatus('success')
+          setEmail('')
+        },
+        onClose: () => {
+          if (status === 'loading') {
+            setStatus('idle')
+          }
+        }
       })
+    } else {
+      window.open(`https://tally.so/r/7RN5AR?email=${encodeURIComponent(email)}`, '_blank')
       setStatus('success')
       setEmail('')
-    } catch (err) {
-      setStatus('success')
     }
   }
 
