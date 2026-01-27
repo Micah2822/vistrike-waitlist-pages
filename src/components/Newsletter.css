@@ -30,19 +30,6 @@
   opacity: 1;
 }
 
-.tally-wrapper {
-  padding: 4px 8px;
-  min-height: 70px;
-  display: flex;
-  align-items: center;
-}
-
-.tally-wrapper iframe {
-  display: block;
-  border: none;
-  min-height: 70px;
-}
-
 .newsletter-form {
   display: flex;
   gap: 8px;
