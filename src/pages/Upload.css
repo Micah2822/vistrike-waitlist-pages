@@ -73,7 +73,7 @@
 }
 
 .hero-subheadline {
-  font-size: clamp(18px, 2.5vw, 24px);
+  font-size: clamp(20px, 2.75vw, 26px);
   font-weight: 500;
   color: var(--accent-light);
   margin-bottom: 24px;
@@ -81,7 +81,7 @@
 }
 
 .hero-body {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(18px, 2.2vw, 22px);
   color: var(--text-secondary);
   line-height: 1.6;
   max-width: 560px;
