@@ -36,6 +36,34 @@ Preferred communication style: Simple, everyday language.
   - Smooth cubic-bezier transitions
   - Glassmorphic components
 
+### Mobile Headline Size Configuration
+To adjust the hero headline font size on mobile, update **three locations** in `src/pages/Upload.css`:
+
+1. **Line ~67-72**: First mobile media query
+   ```css
+   @media (max-width: 768px) {
+     .hero-headline {
+       font-size: 32px;  /* <-- Change this value */
+     }
+   }
+   ```
+
+2. **Line ~1320**: Second mobile media query (inside a larger media query block)
+   ```css
+   .hero-headline {
+     font-size: 32px;  /* <-- Change this value */
+   }
+   ```
+
+3. **Line ~1436**: Third mobile media query for smaller screens (480px)
+   ```css
+   .hero-headline {
+     font-size: 32px;  /* <-- Change this value */
+   }
+   ```
+
+**Important**: All three values should match for consistent mobile sizing. Desktop size is set in the main `.hero-headline` rule around line 58.
+
 ### Build System
 - **Development**: Vite dev server on port 5000 with HMR
 - **Production**: Static build output to `dist/` folder
