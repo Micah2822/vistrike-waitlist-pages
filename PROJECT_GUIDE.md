@@ -1,4 +1,4 @@
-# VISTRIKE - Replit Configuration
+# VISTRIKE - Project Guide
 
 ## Overview
 
@@ -36,33 +36,26 @@ Preferred communication style: Simple, everyday language.
   - Smooth cubic-bezier transitions
   - Glassmorphic components
 
-### Mobile Headline Size Configuration
-To adjust the hero headline font size on mobile, update **three locations** in `src/pages/Upload.css`:
+### Mobile Hero Text Size Configuration
 
-1. **Line ~67-72**: First mobile media query
-   ```css
-   @media (max-width: 768px) {
-     .hero-headline {
-       font-size: 32px;  /* <-- Change this value */
-     }
-   }
-   ```
+All hero text sizes are in `src/pages/Upload.css`. There are **three locations** for each element due to mobile media queries.
 
-2. **Line ~1320**: Second mobile media query (inside a larger media query block)
-   ```css
-   .hero-headline {
-     font-size: 32px;  /* <-- Change this value */
-   }
-   ```
+#### Headline (.hero-headline)
+- **Desktop**: Line ~58 (currently 64px)
+- **Tablet 768px**: Line ~67 and ~1320 (currently 32px)
+- **Mobile 480px**: Line ~1436 (currently 32px)
 
-3. **Line ~1436**: Third mobile media query for smaller screens (480px)
-   ```css
-   .hero-headline {
-     font-size: 32px;  /* <-- Change this value */
-   }
-   ```
+#### Subheadline (.hero-subheadline) - "Built for everyday fighters..."
+- **Desktop**: Line ~78 (currently clamp 20-26px)
+- **Tablet 768px**: Line ~1326 (currently 18px)
+- **Mobile 480px**: Line ~1441 (currently 17px)
 
-**Important**: All three values should match for consistent mobile sizing. Desktop size is set in the main `.hero-headline` rule around line 58.
+#### Body (.hero-body) - "Vistrike helps fighters train smarter..."
+- **Desktop**: Line ~86 (currently clamp 18-22px)
+- **Tablet 768px**: Line ~1331 (currently 17px)
+- **Mobile 480px**: Line ~1446 (currently 15px)
+
+**Important**: Update all locations for each element to maintain consistent sizing across devices.
 
 ### Build System
 - **Development**: Vite dev server on port 5000 with HMR
