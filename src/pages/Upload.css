@@ -53,19 +53,17 @@
 }
 
 .hero-headline {
-  font-size: clamp(56px, 12vw, 96px);
-  font-weight: 900;
-  line-height: 1.05;
+  font-size: clamp(64px, 14vw, 108px);
+  font-weight: 800;
+  line-height: 1.1;
   margin-bottom: 24px;
   color: var(--text-primary);
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
+  letter-spacing: -0.04em;
 }
 
 .hero-headline span {
   display: block;
   white-space: nowrap;
-  color: var(--accent-light);
 }
 
 .hero-subheadline {
