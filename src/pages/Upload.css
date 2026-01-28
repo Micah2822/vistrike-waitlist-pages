@@ -61,6 +61,13 @@
   letter-spacing: -0.04em;
 }
 
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 80px; /* Force much larger size on mobile */
+    line-height: 1.0;
+  }
+}
+
 .hero-headline span {
   display: block;
   white-space: nowrap;
