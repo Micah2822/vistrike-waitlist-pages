@@ -53,7 +53,7 @@
 }
 
 .hero-headline {
-  font-size: clamp(64px, 14vw, 108px);
+  font-size: 64px;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
@@ -63,14 +63,13 @@
 
 @media (max-width: 768px) {
   .hero-headline {
-    font-size: clamp(48px, 10vw, 80px); /* Larger but within bounds */
-    line-height: 1.0;
+    font-size: 56px;
+    line-height: 1.1;
   }
 }
 
 .hero-headline span {
   display: block;
-  white-space: nowrap;
 }
 
 .hero-subheadline {
