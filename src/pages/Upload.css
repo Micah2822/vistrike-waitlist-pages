@@ -1315,8 +1315,8 @@
   }
 
   .hero-headline {
-    font-size: 30px;
-    line-height: 1.2;
+    font-size: 64px;
+    line-height: 1.1;
     margin-bottom: 20px;
   }
 
@@ -1431,7 +1431,7 @@
   }
 
   .hero-headline {
-    font-size: 26px;
+    font-size: 64px;
     margin-bottom: 16px;
   }
 
