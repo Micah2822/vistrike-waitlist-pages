@@ -63,8 +63,8 @@
 
 @media (max-width: 768px) {
   .hero-headline {
-    font-size: 80px; /* Force much larger size on mobile */
-    line-height: 1.0;
+    font-size: 130px; /* Forced much larger size on mobile */
+    line-height: 0.9;
   }
 }
 
