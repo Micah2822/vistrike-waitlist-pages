@@ -63,14 +63,14 @@
 
 @media (max-width: 768px) {
   .hero-headline {
-    font-size: 130px !important; /* Forced much larger size on mobile */
-    line-height: 0.9 !important;
+    font-size: clamp(48px, 10vw, 80px); /* Larger but within bounds */
+    line-height: 1.0;
   }
 }
 
 .hero-headline span {
-  display: block !important;
-  white-space: nowrap !important;
+  display: block;
+  white-space: nowrap;
 }
 
 .hero-subheadline {
