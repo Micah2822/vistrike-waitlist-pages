@@ -63,7 +63,7 @@
 
 @media (max-width: 768px) {
   .hero-headline {
-    font-size: 48px;
+    font-size: 32px;
     line-height: 1.1;
   }
 }
@@ -1315,7 +1315,7 @@
   }
 
   .hero-headline {
-    font-size: 48px;
+    font-size: 32px;
     line-height: 1.1;
     margin-bottom: 20px;
   }
@@ -1431,7 +1431,7 @@
   }
 
   .hero-headline {
-    font-size: 48px;
+    font-size: 32px;
     margin-bottom: 16px;
   }
 
