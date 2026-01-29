@@ -87,7 +87,7 @@ function Newsletter() {
                   Joining...
                 </span>
               ) : (
-                'Join the Beta'
+                'Get early access'
               )}
             </button>
           </form>

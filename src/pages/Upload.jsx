@@ -417,7 +417,7 @@ function Upload() {
         <section className="beta-section" data-testid="section-beta">
           <div className="beta-glow"></div>
           <div className="beta-content">
-            <h2 className="beta-title">Join the beta</h2>
+            <h2 className="beta-title">Get early access</h2>
             <p className="beta-intro">We're opening early access to a small group of fighters.</p>
             <p className="beta-subtitle">As a beta tester, you'll:</p>
             <ul className="beta-list">
