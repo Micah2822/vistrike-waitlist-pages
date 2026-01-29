@@ -171,7 +171,7 @@ function Upload() {
             Built for everyday fighters. Powered by AI.
           </h2>
           <p className="hero-body animate-fade-in animate-delay-2" data-testid="text-body">
-            Vistrike helps fighters train smarter with real-time feedback on every punch, every round, every session.
+            Vistrike helps fighters train smarter with real-time feedback on every punch, every round, every session - straight to your device, with no cameras or extra equipment needed.
           </p>
           
           <div className="hero-cta animate-fade-in animate-delay-3">
